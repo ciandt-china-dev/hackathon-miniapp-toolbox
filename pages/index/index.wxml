@@ -2,5 +2,5 @@
 <view class="container">
     <button type="default" bindtap="goRate"> 倒数日计算器 </button>
     <button type="default" bindtap="goExchangeRate"> 实时汇率查询 </button>
-    <button type="getShortlinkIndex"bindtap="getShortlinkIndex" hover-class="other-button-hover"> 短链接生成器 </button>
+    <button type="getShortlinkIndex"bindtap="getShortlinkIndex"> 短链接生成器 </button>
 </view>

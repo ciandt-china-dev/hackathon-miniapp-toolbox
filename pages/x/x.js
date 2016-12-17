@@ -3,7 +3,7 @@ Page({
   data:{
     isAddBoxShow: false,
     addButtonText: '+',
-    date: new Date(),
+    date: '2016-12-18',
     lists: [],
     storedLists: [],
     currentItemName: ''
