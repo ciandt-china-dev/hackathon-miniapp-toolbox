@@ -16,7 +16,7 @@
   </form>
   <view wx:if="{{isAddBoxShow == false}}" class="lists">
     <view wx:for="{{lists}}" wx:for-item="list" wx:key="{{list.name}}" class="list {{list.className}}">
-      <view class="name" data-name="{{list.name}}" bindtap="handleEditDelModal">
+      <view class="name" data-name="{{list.name}}" data-index="{{list.index}}" bindtap="handleEditDelModal">
         {{list.className == 'besides' ? '距离' : ''}}
         {{list.name}}
         {{list.className == 'besides' ? '还有' : ''}}

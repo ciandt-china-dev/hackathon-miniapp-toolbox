@@ -5,8 +5,10 @@ Page({
     addButtonText: '+',
     date: '2016-12-18',
     lists: [],
+    index: 1,
     storedLists: [],
-    currentItemName: ''
+    currentItemName: '',
+    currentIndex: ''
   },
   handleAddButton: function() {
     var _t = this;
@@ -18,7 +20,8 @@ Page({
   handleEditDelModal: function(e) {
     var _t = this;
     _t.setData({
-      currentItemName: e.target.dataset.name
+      currentItemName: e.target.dataset.name,
+      currentIndex: e.target.dataset.index
     });
     wx.showActionSheet({
       itemList: ['删除'],
@@ -37,9 +40,10 @@ Page({
   deleteItem: function() {
     var _t = this;
     var name = _t.data.currentItemName;
+    var index = _t.data.currentIndex;
     var oldLists = _t.data.lists;    
     var newLists = oldLists.filter(function(item) {
-      if (item.name != name) {
+      if (item.index != index) {
         return item;
       }
     });
@@ -61,9 +65,11 @@ Page({
     var formData = e.detail.value;
     var oldLists = _t.data.lists;
     if (formData.name === '') return;
+    formData.index = _t.data.index + 1;
     oldLists.push(_t.processSingleItem(formData));
     _t.setData({
       lists: oldLists,
+      index: _t.data.index + 1,
       isAddBoxShow: !_t.data.isAddBoxShow,
       addButtonText: _t.data.isAddBoxShow ? '+' : '-'
     });
@@ -84,7 +90,8 @@ Page({
     var date = new Date(item.date);
     var item = {
       name: item.name,
-      date: item.date
+      date: item.date,
+      index: item.index
     }
     if (now > date) {
       item.className = 'already';
@@ -111,6 +118,7 @@ Page({
     var _t = this;
     var storedLists = wx.getStorageSync('storedLists') || [{
       name: '过年',
+      index: 1,
       date: '2017-01-27'
     }];
     var lists =  _t.processAllItem(storedLists)
