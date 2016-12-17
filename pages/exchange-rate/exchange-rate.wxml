@@ -9,29 +9,29 @@
       <!--<text class="cnyToUsd">1人民币={{cnyToUsd}}美元</text>-->
     </view>
   </view>
-  <form catchsubmit="formSubmit" catchreset="formReset" class="wrapper">
+  <form bindsubmit="formSubmit" catchreset="formReset" class="wrapper">
     <view class="exchangeRate">
       <view class="from item">
-        <input name="from_money" value="1" />
-        <picker name="from_country" value="{{fromIndex}}" range="{{country}}">
+        <input name="from_money" value="{{fromMoney}}" />
+        <picker name="from_country" bindchange="bindFromCountryChange" value="{{fromIndex}}" range="{{country}}">
           <view class="picker">{{country[fromIndex]}}</view>
         </picker>
       </view>
       <view class="to item">
-        <input name="to_money" value="1" />
-        <picker name="to_country" value="{{toIndex}}" range="{{country}}">
+        <input name="to_money" value="{{toMoney}}" />
+        <picker name="to_country" bindchange="bindToCountryChange" value="{{toIndex}}" range="{{country}}">
           <view class="picker">{{country[toIndex]}}</view>
         </picker>
       </view>
     </view>
     <view class="direction">
       <view class="top"></view>
-      <!--<view class="btn" bindtap="switchCountry"></view>-->
-      <button class="btn" formType="submit" bindtap="switchCountry"></button>
+      <button class="btn" bindtap="switchCountry"></button>
       <view class="bottom"></view>
     </view>
     <view class="btn-area">
-      <button formType="submit" bindtap="getRate">查询</button>
+      <button name="submit" formType="submit">查询</button>
     </view>
+    <text class="notice">{{notice}}</text>
   </form>
 </view>
