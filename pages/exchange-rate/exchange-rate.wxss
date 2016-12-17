@@ -42,27 +42,35 @@
 .wrapper .exchangeRate {
   width: 85%;
   float: left;
-  height : 60px;
+  height: 60px;
 }
 
 .exchangeRate .item {
-  width : 100%;
+  width: 100%;
   height: 40px;
 }
 
 .exchangeRate .item input {
-  width:35%;
-  float:left;
-  clear:left;
-  margin-right: 10%;
-  position: relative;
-  top: -5px;
+  width: 35%;
+  float: left;
+  clear: left;
+  margin-right: 15px;
 }
 
-
 .exchangeRate .item picker {
-  width:45%;
-  float:left;
+  width: 45%;
+  float: left;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+
+.exchangeRate .item picker .picker {
+  padding: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .wrapper .direction {
@@ -72,15 +80,16 @@
 }
 
 .wrapper .direction .top, .wrapper .direction .bottom {
-  width:18px;
-  height:15px;
-  margin-left:8px;
-  border:1px solid #ccc;
+  width: 18px;
+  height: 15px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
   border-width: 1px 1px 0 0;
 }
 
 .wrapper .direction .top {
   border-width: 1px 1px 0 0;
+  margin-top: 6px;
 }
 
 .wrapper .direction .bottom {
@@ -88,19 +97,23 @@
 }
 
 .wrapper .direction .btn {
-  width:52px;
-  height:36px;
+  width: 52px;
+  height: 36px;
   background: url('http://merial.dev.ciandt.cn/sites/default/files/pictures/toggle.jpg');
   background-size: 60%;
   background-position: center center;
-  background-repeat : no-repeat;
+  background-repeat: no-repeat;
 }
 
 .wrapper .btn-area {
-  width:50%;
+  width: 100%;
   text-align: center;
-  margin-top: 90px;
+  margin-top: 100px;
   margin-bottom: 10px;
+}
+
+.wrapper .btn-area button {
+  font-size: 16px;
 }
 
 .notice {

@@ -82,7 +82,7 @@ Page({
         'app': 'finance.rate_curlist',
         'appkey': appkey,
         'sign': sign,
-        'format': json,
+        'format': 'json',
       },
       method: 'GET',
       success: function (res) {

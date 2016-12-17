@@ -30,7 +30,7 @@
       <view class="bottom"></view>
     </view>
     <view class="btn-area">
-      <button name="submit" formType="submit">查询</button>
+      <button name="submit" type="primary" formType="submit">查询</button>
     </view>
     <text class="notice">{{notice}}</text>
   </form>
