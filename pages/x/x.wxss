@@ -113,3 +113,8 @@
 .already .end {
   background: #f57a00;
 }
+
+.no-data {
+  color: #333;
+  font-size: 16px;
+}

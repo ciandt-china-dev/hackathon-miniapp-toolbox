@@ -4,19 +4,9 @@ Page({
     isAddBoxShow: false,
     addButtonText: '+',
     date: new Date(),
-    lists: [
-      {
-        name: '星期六',
-        date: '2016-12-12',
-        className: 'already',
-        numberText: '12'
-      },{
-        name: '星期六',
-        date: '2016-12-12',
-        className: 'besides',
-        numberText: '12'
-      }
-    ]
+    lists: [],
+    storedLists: [],
+    currentItemName: ''
   },
   handleAddButton: function() {
     var _t = this;
@@ -24,6 +14,47 @@ Page({
       isAddBoxShow: !_t.data.isAddBoxShow,
       addButtonText: _t.data.isAddBoxShow ? '+' : '-'
     });
+  },
+  handleEditDelModal: function(e) {
+    var _t = this;
+    _t.setData({
+      currentItemName: e.target.dataset.name
+    });
+    wx.showActionSheet({
+      itemList: ['删除'],
+      success: function(res) {
+        if (!res.cancel) {
+          console.log(res.tapIndex);
+          if (res.tapIndex === 0) {
+            _t.deleteItem();
+          } else {
+            _t.editItem();
+          }
+        }
+      }
+    })
+  },
+  deleteItem: function() {
+    var _t = this;
+    var name = _t.data.currentItemName;
+    var oldLists = _t.data.lists;    
+    var newLists = oldLists.filter(function(item) {
+      if (item.name != name) {
+        return item;
+      }
+    });
+    _t.setData({
+      lists: newLists
+    });
+    wx.setStorageSync('storedLists', newLists);
+    wx.showToast({
+      title: '删除成功',
+      icon: 'success',
+      duration: 1000
+    })
+  },
+  editItem: function() {
+
   },
   formSubmit: function(e) {
     var _t = this;
@@ -36,6 +67,7 @@ Page({
       isAddBoxShow: !_t.data.isAddBoxShow,
       addButtonText: _t.data.isAddBoxShow ? '+' : '-'
     });
+    wx.setStorageSync('storedLists', oldLists);
   },
   bindPickerChange: function(e) {
     this.setData({
@@ -63,8 +95,32 @@ Page({
 
     return item;
   },
+  processAllItem: function(lists) {
+    var _t = this;
+    var newLists = lists.map(function(item) {
+      return _t.processSingleItem(item);
+    });
+    return newLists;
+  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading'
+    })
+    var _t = this;
+    var storedLists = wx.getStorageSync('storedLists') || [{
+      name: '过年',
+      date: '2017-01-27'
+    }];
+    var lists =  _t.processAllItem(storedLists)
+    setTimeout(function() {
+      _t.setData({
+        lists: lists
+      });
+      wx.hideToast();
+    }, 1000);
+
   },
   onReady:function(){
     // 页面渲染完成
