@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/exchange-rate/exchange-rate",
+    "pages/x/x",
     "pages/logs/logs"
   ],
   "window":{

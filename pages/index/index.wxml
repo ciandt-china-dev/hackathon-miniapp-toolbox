@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-    <button type="default"bindtap="goExchangeRate"> 实时汇率查询 </button>
-    <button type="default"bindtap="default" hover-class="other-button-hover"> 短链接生成器 </button>
+    <button type="default" bindtap="goRate"> 倒数日 </button>
+    <button type="default" bindtap="goExchangeRate"> 实时汇率查询 </button>
+    <button type="default" bindtap="goShorter"> 短链接生成器 </button>
 </view>

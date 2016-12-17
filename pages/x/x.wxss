@@ -1,0 +1,115 @@
+/* pages/x/x.wxss */
+.top {
+  background: #1AAD16;
+  width: 100%;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.add {
+  font-size: 40px;
+  position: relative;
+  top: -2px;
+}
+
+.add-box,
+.lists {
+  margin-top: 10px;
+  width: 90%;
+  color: #333;
+  font-size: 16px;
+}
+
+.title {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 6px 12px;
+}
+
+.save {
+  margin-top: 30px;
+}
+
+.date {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px 12px;
+}
+
+.lists {
+  margin-top: 30px;
+}
+
+.list {
+  display: flex;
+  font-size: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.list:last-child {
+  margin-bottom: 0;
+}
+
+.name,
+.number,
+.end {
+  text-align: center;
+  color: #fff;
+}
+
+.name {
+  width: 70%;
+  padding: 10px 0 10px 10px;
+  text-align: left;
+}
+
+.number {
+  width: 20%;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.end {
+  width: 15%;
+  text-align: center;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.besides {
+  border: 1px solid #42a5f6;
+}
+.besides .name {
+  color: #42a5f6;
+}
+.besides .number {
+  background: #64b8fd;
+}
+.besides .end {
+  background: #42a5f6;
+}
+
+.already {
+  border: 1px solid #f57a00;
+}
+.already .name {
+  color: #f57a00;
+}
+.already .number {
+  background: #f98e25;
+}
+.already .end {
+  background: #f57a00;
+}

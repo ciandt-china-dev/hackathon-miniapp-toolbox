@@ -1,0 +1,29 @@
+<!--x.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="add" bindtap="handleAddButton">{{addButtonText}}</view>
+  </view>
+  <form bindsubmit="formSubmit"  wx:if="{{isAddBoxShow}}" class="add-box">
+    <view class="title">名称：</view>
+    <input class="input" name="name" placeholder="请输入名称" />
+    <view class="title">日期：</view>
+    <picker mode="date" value="{{date}}" bindchange="bindDateChange" name="date" class="date">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+    <button type="primary" class="save" form-type="submit">保存</button>
+  </form>
+  <view wx:if="{{isAddBoxShow == false}}"class="lists">
+    <view wx:for="{{lists}}" wx:for-item="list" wx:key="*this" class="list {{list.className}}">
+      <view class="name">
+        {{list.className == 'besides' ? '距离' : ''}}
+        {{list.name}}
+        {{list.className == 'besides' ? '还有' : ''}}
+        {{list.className == 'already' ? '已经' : ''}}
+      </view>
+      <view class="number">{{list.numberText}}</view>
+      <view class="end">天</view>
+    </view>
+  </view>
+</view>
