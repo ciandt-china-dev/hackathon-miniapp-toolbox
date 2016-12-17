@@ -17,6 +17,11 @@ Page({
       url: '../x/x'
     })
   },
+  getShortlinkIndex: function() {
+    wx.navigateTo({
+      url: '../short-link/short-link'
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

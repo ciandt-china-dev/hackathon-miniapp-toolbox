@@ -1,0 +1,20 @@
+<!--pages/short-link/short-link.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <text>请输入长链接:</text>
+    <input type="text" value='' name="url_long" auto-focus/>
+  </view>
+  <view class='error-message' wx:if="{{error_message}}">
+   <text>{{error_message}}</text>
+  </view>
+  <view class="container">
+    <button formType="submit" hover-class="other-button-hover"> 生成短连接 </button>
+  </view>
+</form>
+
+<view wx:if="{{url_short}}">
+  <view class="short-url">
+    <text>生成的短网址：</text>
+    <input type="text" value="{{url_short}}"/>
+  </view>
+</view>

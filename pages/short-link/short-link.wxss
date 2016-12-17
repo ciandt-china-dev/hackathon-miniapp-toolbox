@@ -1,0 +1,34 @@
+/* pages/short-link/short-link.wxss */
+.section text{
+  font-size: 15px;
+}
+.short-url text{
+  font-size: 15px;
+}
+.error-message {
+  border: 1px solid #ccc;
+}
+.error-message text{
+  font-size: 15px;
+  color: red;
+}
+.section input{
+  border: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.short-url input{
+  border: 1px solid #ccc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}

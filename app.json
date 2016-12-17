@@ -3,6 +3,7 @@
     "pages/index/index",
     "pages/exchange-rate/exchange-rate",
     "pages/x/x",
+    "pages/short-link/short-link",
     "pages/logs/logs"
   ],
   "window":{
