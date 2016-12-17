@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/exchange-rate/exchange-rate",
     "pages/logs/logs"
   ],
   "window":{

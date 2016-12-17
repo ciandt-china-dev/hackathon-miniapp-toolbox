@@ -7,9 +7,9 @@ Page({
     userInfo: {}
   },
   //事件处理函数
-  bindViewTap: function() {
+  goExchangeRate: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../exchange-rate/exchange-rate'
     })
   },
   onLoad: function () {
