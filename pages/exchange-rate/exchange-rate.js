@@ -22,7 +22,9 @@ Page({
       key: 'country',
       success: function (res) {
         _t.setData({
-          country: res.data
+          country: res.data,
+          fromIndex: res.data.indexOf("USD 美元"),
+          toIndex: res.data.indexOf("CNY 人民币"),
         });
       }
     })
@@ -82,17 +84,11 @@ Page({
 
         }
       },
-      fail: function () {
-        // fail
-      },
-      complete: function () {
-        console.log(0)
-      }
+      fail: function () { }
     })
   },
   switchCountry: function (e) {
     console.log('switch');
-
   }
 
 })

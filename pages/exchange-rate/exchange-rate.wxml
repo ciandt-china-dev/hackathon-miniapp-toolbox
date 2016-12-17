@@ -14,13 +14,13 @@
       <view class="from item">
         <input name="from_money" value="1" />
         <picker name="from_country" value="{{fromIndex}}" range="{{country}}">
-          <view class="picker">2323{{country[fromIndex]}}</view>
+          <view class="picker">{{country[fromIndex]}}</view>
         </picker>
       </view>
       <view class="to item">
         <input name="to_money" value="1" />
         <picker name="to_country" value="{{toIndex}}" range="{{country}}">
-          <view class="picker">232{{country[toIndex]}}</view>
+          <view class="picker">{{country[toIndex]}}</view>
         </picker>
       </view>
     </view>
