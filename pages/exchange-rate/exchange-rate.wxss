@@ -51,7 +51,7 @@
 }
 
 .exchangeRate .item input {
-  width: 35%;
+  width: 100px;
   float: left;
   clear: left;
   margin-right: 15px;
@@ -126,6 +126,7 @@ input {
   border: 1px solid #ccc;
   padding: 2px 12px;
   border-radius: 3px;
+  height: 26px;
 }
 
 .to {
