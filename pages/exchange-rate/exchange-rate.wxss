@@ -1,22 +1,29 @@
 /* pages/exchange-rate/exchange-rate.wxss */
 
 .header {
-  width: 100%;
+  width: 90%;
 }
 
 .header .icon {
   width: 56px;
   height: 56px;
-  background: url('../../images/tools-icon.png') -144px -144px;
+  background: url('http://merial.dev.ciandt.cn/sites/default/files/pictures/tools-icon_0.png');
   float: left;
-  margin: 10px;
 }
 
 .header .text {
-  width:70%;
-  margin-top: 10px;
-  line-height: 24px;
   float: left;
+  font-size: 16px;
+  color: #333;
+  margin-left: 10px;
+}
+
+.title {
+  margin-top: 4px;
+}
+
+.usdToCny {
+  margin-top: 8px;
 }
 
 .header .text text {
@@ -26,7 +33,9 @@
 
 .wrapper {
   width: 90%;
-  padding: 10px;
+  margin-top: 30px;
+  font-size: 16px;
+  color: #333;
 }
 
 .wrapper .exchangeRate {
@@ -78,7 +87,10 @@
 .wrapper .direction .btn {
   width:52px;
   height:36px;
-  background: url(../../images/toggle.jpg);
+  background: url('http://merial.dev.ciandt.cn/sites/default/files/pictures/toggle.jpg');
+  background-size: 60%;
+  background-position: center center;
+  background-repeat : no-repeat;
 }
 
 .wrapper .btn-area {
