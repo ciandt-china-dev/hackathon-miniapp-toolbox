@@ -1,6 +1,8 @@
 /* pages/short-link/short-link.wxss */
 .error-message {
-  border: 1px solid #ccc;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .error-message text{
   font-size: 15px;
@@ -21,4 +23,17 @@
 .save {
   background: #1AAD16;
   color: #fff;
+  margin-top: 20px;
+}
+
+.section,
+.short-url {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  font-size: 16px;
+  color: #333;
 }

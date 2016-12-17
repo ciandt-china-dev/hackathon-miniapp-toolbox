@@ -50,10 +50,12 @@
 }
 
 .exchangeRate .item input {
-  width:45%;
+  width:35%;
   float:left;
   clear:left;
-  
+  margin-right: 10%;
+  position: relative;
+  top: -5px;
 }
 
 
@@ -96,4 +98,18 @@
 .wrapper .btn-area {
   width:50%;
   text-align: center;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+.notice {
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 2px 12px;
+  border-radius: 3px;
 }
