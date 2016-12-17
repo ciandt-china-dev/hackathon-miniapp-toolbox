@@ -5,7 +5,7 @@ var secret = "29c46969bcd1a5a25a23a7af28e06de1";
 var sign = "9437958a31ca08fba8ff87013d7ab7ba";
 Page({
   data: {
-    usdToCny: "",
+    default: "正在加载默认汇率...",
     country: [],
     fromIndex: '',
     toIndex: '',
@@ -56,8 +56,9 @@ Page({
         if (data.success == "1") {
           var rate = data.result.rate;
           var update = data.result.update;
+          console.log(from.substring(3));
           _t.setData({
-            usdToCny: rate.toFixed(6),
+            default: "1 " + from.substring(3) + " = " + parseFloat(rate).toFixed(6) + to.substring(3),
             notice:'数据仅供参考，更新：' + update,
           });
         }

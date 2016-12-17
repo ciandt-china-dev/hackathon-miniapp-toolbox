@@ -5,7 +5,7 @@
     <view class="icon"></view>
     <view class="text">
       <text class="title">货币汇率</text>
-      <text class="usdToCny">1美元={{usdToCny}}人民币</text>
+      <text class="usdToCny">{{default}}</text>
       <!--<text class="cnyToUsd">1人民币={{cnyToUsd}}美元</text>-->
     </view>
   </view>
