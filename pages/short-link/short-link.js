@@ -24,6 +24,12 @@ Page({
   },
   formSubmit: function(e) {
     var that = this;
+    if (!e.detail.value.url_long) {
+      that.setData({
+            error_message:false
+        })
+      return false;
+    }
     wx.showToast({
       title: '加载中',
       icon: 'loading',
