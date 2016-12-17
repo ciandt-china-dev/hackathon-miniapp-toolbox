@@ -24,6 +24,11 @@ Page({
   },
   formSubmit: function(e) {
     var that = this;
+    wx.showToast({
+      title: '加载中',
+      icon: 'loading',
+      duration: 10000
+    })
    //请求ajax
    wx.request({
      url: 'https://api.t.sina.com.cn/short_url/shorten.json',
@@ -36,6 +41,7 @@ Page({
      success: function(res){
        // success
        if (res.statusCode == 200) {
+        wx.hideToast();
         var data = res.data[0];
         that.setData({
             url_long:data.url_long,
@@ -44,7 +50,9 @@ Page({
         })
        }
        else {
+         wx.hideToast();
          that.setData({
+            url_short:false,           
             error_message:'您输入的URL不正确，请重新输入。'
         })
        }
